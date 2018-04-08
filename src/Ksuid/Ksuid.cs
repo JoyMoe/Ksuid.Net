@@ -75,7 +75,7 @@ namespace KSUID
 
         public override string ToString()
         {
-            return ToByteArray().ToBase62().PadLeft(EncodedSize);
+            return ToByteArray().ToBase62().PadLeft(EncodedSize, '0');
         }
 
         public byte[] GetPayload()
