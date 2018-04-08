@@ -10,6 +10,6 @@
     <DotNetCliToolReference Include="dotnet-xunit" Version="2.3.1" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\src\Ksuid\Ksuid.csproj" />
+    <ProjectReference Include="..\..\src\Ksuid\Ksuid.csproj" />
   </ItemGroup>
 </Project>

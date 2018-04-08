@@ -1,6 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2012
+# Visual Studio 2017
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{5B314999-B159-4847-A93F-117AE4067C08}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "samples", "samples", "{CF0E5FF7-9919-429D-9A43-2E32B7EFBE75}"
@@ -9,7 +9,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "cli", "samples\cli\cli.cspr
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{5CE5F2EF-F808-409C-9949-AC3F1EE9A28C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KsuidTests", "KsuidTests\KsuidTests.csproj", "{9FC24F84-C0F3-40DC-9B88-C51ED7A614D6}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KsuidTests", "tests\KsuidTests\KsuidTests.csproj", "{9FC24F84-C0F3-40DC-9B88-C51ED7A614D6}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ksuid", "src\Ksuid\Ksuid.csproj", "{59C6F2F8-C001-4E40-83EA-88DC152D4745}"
 EndProject
