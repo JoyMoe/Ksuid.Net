@@ -40,10 +40,7 @@ namespace KsuidTests
             Assert.Equal("0o5Fs0EELR0fUjHjbCnEtdUwQe3", ksuid.ToString());
             Assert.Equal((uint)94985761, ksuid.GetTimestamp());
             Assert.Equal((uint)1494985761, ksuid.GetUnixTimestamp());
-            Assert.Equal("d7b6fe8cd7cff211704d8e7b9421210b", BitConverter.ToString(ksuid.GetPayload()).Replace("-",""));
-
-            var datetime = new DateTime(ksuid.GetUnixTimestamp());
-            Assert.Equal("2017-05-17 01:49:21", datetime.ToString("yyyy-MM-dd HH:mm:ss"));
+            Assert.Equal("D7B6FE8CD7CFF211704D8E7B9421210B", BitConverter.ToString(ksuid.GetPayload()).Replace("-",""));
         }
 
         [Fact]
@@ -54,10 +51,7 @@ namespace KsuidTests
             Assert.Equal("0o5Fs0EELR0fUjHjbCnEtdUwQe3", ksuid.ToString());
             Assert.Equal((uint)94985761, ksuid.GetTimestamp());
             Assert.Equal((uint)1494985761, ksuid.GetUnixTimestamp());
-            Assert.Equal("d7b6fe8cd7cff211704d8e7b9421210b", BitConverter.ToString(ksuid.GetPayload()).Replace("-",""));
-
-            var datetime = new DateTime(ksuid.GetUnixTimestamp());
-            Assert.Equal("2017-05-17 01:49:21", datetime.ToString("yyyy-MM-dd HH:mm:ss"));
+            Assert.Equal("D7B6FE8CD7CFF211704D8E7B9421210B", BitConverter.ToString(ksuid.GetPayload()).Replace("-",""));
         }
     }
 }
