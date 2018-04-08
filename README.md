@@ -8,7 +8,6 @@ This library implements the [K-Sortable Globally Unique IDs](https://github.com/
 [![NuGet](https://img.shields.io/nuget/v/Ksuid.svg)](https://www.nuget.org/packages/Ksuid)
 [![NuGet](https://img.shields.io/nuget/vpre/Ksuid.svg)](https://www.nuget.org/packages/Ksuid/absoluteLatest)
 ![net462](https://img.shields.io/badge/.Net-4.6.2-brightgreen.svg)
-![netstandard1.5](https://img.shields.io/badge/.Net-netstandard1.5-brightgreen.svg)
 ![netstandard2.0](https://img.shields.io/badge/.Net-netstandard2.0-brightgreen.svg)
 
 ## Installation

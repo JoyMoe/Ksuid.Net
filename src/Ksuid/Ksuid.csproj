@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <Description>K-Sortable Globally Unique IDs</Description>
-    <TargetFrameworks>net462;netstandard1.5;netstandard2.0</TargetFrameworks>
+    <TargetFrameworks>net462;netstandard2.0</TargetFrameworks>
     <NoWarn>$(NoWarn);CS1591</NoWarn>
     <Version>0.9.0</Version>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
@@ -19,7 +19,7 @@
     <Reference Include="Microsoft.CSharp" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="base62-csharp" Version="1.0.0" />
+    <PackageReference Include="Base62-Net" Version="1.1.0-build6" />
     <PackageReference Include="JetBrains.Annotations" Version="11.1.0" />
     <PackageReference Include="System.Runtime.Extensions" Version="4.3.0" />
   </ItemGroup>

@@ -1,5 +1,4 @@
 using System;
-using Base62;
 using KSUID;
 using Xunit;
 
@@ -50,7 +49,8 @@ namespace KsuidTests
         [Fact]
         public void TestShouldCreateFromByteArray()
         {
-            var ksuid = Ksuid.FromByteArray("0o5Fs0EELR0fUjHjbCnEtdUwQe3".FromBase62());
+            var ksuid = Ksuid.FromByteArray(new byte[]
+                {5, 169, 94, 33, 215, 182, 254, 140, 215, 207, 242, 17, 112, 77, 142, 123, 148, 33, 33, 11});
             Assert.Equal("0o5Fs0EELR0fUjHjbCnEtdUwQe3", ksuid.ToString());
             Assert.Equal((uint)94985761, ksuid.GetTimestamp());
             Assert.Equal((uint)1494985761, ksuid.GetUnixTimestamp());
