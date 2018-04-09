@@ -13,6 +13,13 @@ namespace KsuidTests
         }
 
         [Fact]
+        public void TestShouldGetTimestamp()
+        {
+            var datetime = new DateTime(2017, 05, 17, 01, 49, 21, DateTimeKind.Utc);
+            Assert.Equal((uint)94985761, Ksuid.GetTimestamp(datetime));
+        }
+
+        [Fact]
         public void TestShouldConstruct()
         {
             var ksuid = new Ksuid();

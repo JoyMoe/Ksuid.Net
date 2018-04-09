@@ -6,12 +6,13 @@ namespace KSUID
 {
     public class Ksuid
     {
-        private const int TimestampSize = 4;
-        private const int PayloadSize = 16;
         private const int EncodedSize = 27;
-        private const int Epoch = 1400000000;
-        private readonly uint _timestamp;
+        private const int PayloadSize = 16;
+        private const int TimestampSize = 4;
+        private const uint Epoch = 1400000000;
+        private static readonly DateTime EpochDateTime = new DateTime(2014, 05, 13, 16, 53, 20, DateTimeKind.Utc);
         private readonly byte[] _payload;
+        private readonly uint _timestamp;
 
         public Ksuid()
         {
@@ -33,6 +34,11 @@ namespace KSUID
         {
             _payload = payload;
             _timestamp = timestamp;
+        }
+
+        public static uint GetTimestamp(DateTime value)
+        {
+            return Convert.ToUInt32((value - EpochDateTime).TotalSeconds);
         }
 
         public static Ksuid Generate()
