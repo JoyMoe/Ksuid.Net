@@ -60,5 +60,17 @@ namespace KsuidTests
             Assert.Equal((uint)1494985761, ksuid.GetUnixTimestamp());
             Assert.Equal("D7B6FE8CD7CFF211704D8E7B9421210B", BitConverter.ToString(ksuid.GetPayload()).Replace("-",""));
         }
+
+        [Fact]
+        public void TestShouldGenerateDifferentPayload()
+        {
+            var ksuid1 = new Ksuid();
+            var ksuid2 = new Ksuid();
+            
+            // this is due to the .NET Framework Random implementation,
+            // which takes the seed as time-based and will produce same values
+            // when two instances of System.Random are created within a short duration
+            Assert.NotEqual(ksuid1.GetPayload(), ksuid2.GetPayload());
+        }
     }
 }

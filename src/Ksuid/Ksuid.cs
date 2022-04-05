@@ -11,14 +11,17 @@ namespace KSUID
         private const int TimestampSize = 4;
         private const uint Epoch = 1400000000;
         private static readonly DateTime EpochDateTime = new DateTime(2014, 05, 13, 16, 53, 20, DateTimeKind.Utc);
+        private static readonly Random RandomGen = new Random();
         private readonly byte[] _payload;
         private readonly uint _timestamp;
 
         public Ksuid()
         {
             var byteArray = new byte[PayloadSize];
-            var random = new Random();
-            random.NextBytes(byteArray);
+            lock (RandomGen)
+            { 
+                RandomGen.NextBytes(byteArray);
+            }
             _payload = byteArray;
 
             _timestamp = Convert.ToUInt32(DateTimeOffset.UtcNow.ToUnixTimeSeconds() - Epoch);
